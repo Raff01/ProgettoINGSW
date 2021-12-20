@@ -97,7 +97,7 @@ public class OrderPageController extends BorderPane {
 			PDFCreator.getIstance().appendText("Totale: " + o.getPrice().toString() + "€");
 			PDFCreator.getIstance().getPDF();
 			EmailSender email = new EmailSender(profile.getUsername());
-			email.sendEmail("animalshopigpe@gmail.com", "Igpe2021!", dbManager.getEmail(profile.getUsername()),
+			email.sendEmail("petshopingsw@gmail.com", "Ingsw2021.", dbManager.getEmail(profile.getUsername()),
 					name + o.getIdOrder() + ".pdf");
 			dbManager.closedConnection();
 

@@ -150,7 +150,7 @@ public class LoginController extends BorderPane {
 			super.run();
 			if(!dbManager.isEnstablished())
 				dbManager.startConnection();
-			email.sendEmail("animalshopigpe@gmail.com", "Igpe2021!", dbManager.getEmail(recover));
+			email.sendEmail("petshopingsw@gmail.com", "Ingsw2021.", dbManager.getEmail(recover));
 			dbManager.closedConnection();
 		}
 

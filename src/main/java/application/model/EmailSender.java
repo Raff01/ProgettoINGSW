@@ -45,7 +45,7 @@ public class EmailSender {
 
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("animalshopigpe@gmail.com"));
+			message.setFrom(new InternetAddress("petshopingsw@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
 			message.setSubject("Animal shop: recupero password");
 
@@ -80,9 +80,9 @@ public class EmailSender {
 
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("animalshopigpe@gmail.com"));
+			message.setFrom(new InternetAddress("petshopingsw@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
-			message.setSubject("Animal shop: riepilogo ordine");
+			message.setSubject("Pet shop: riepilogo ordine");
 
 			MimeBodyPart messageBodyPart = new MimeBodyPart();
 
