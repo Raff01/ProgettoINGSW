@@ -22,12 +22,12 @@
 }
 .textField {
 	-fx-background-color: #f5c242;
-	-fx-border-color: 20;
+	border-color: 20;
 	-fx-background-radius: 20;
 }
 .textField:hover{
 	-fx-background-color: #f5e642;
-	-fx-border-color: 20;
+	border-color: 20;
 }
 .btn0{
 	-fx-background-color: #7FFF00;
@@ -73,10 +73,10 @@
 }
 
 .date-picker .text-field {
-	 -fx-background-color: #f5c242;
+	-fx-background-color: #f5c242;
 }
 
-.date-picker .text-field:focused{
+.date-picker.textfield:focused{
 	-fx-background-color: #f5e642;
 }
 
@@ -137,11 +137,11 @@
 .cancelbtn{
 	-fx-padding: 10px;
     -fx-background-insets: 6px;
-	-fx-background-color: #RED;
+	-fx-background-color: RED;
 }
 
 .cancelbtn:hover {
-	-fx-background-color: #DARKRED;
+	-fx-background-color: DARKRED;
 }
 .search{
 	-fx-border-radius:15px;
@@ -151,27 +151,27 @@
 }
 
 #search_btn{
--fx-background-color: transparent;
+	-fx-background-color: transparent;
 }
 
 #search_btn:hover{
--fx-background-color:#a6aeba;
+	-fx-background-color:#a6aeba;
 	-fx-border-radius:17px;
--fx-background-radius:17px;
+	-fx-background-radius:17px;
 
 }
 
 #search_field{
--fx-background-color: transparent;
+	-fx-background-color: transparent;
 }
 
 .minus{
--fx-border-radius: 0 0 15 15 ;
-  -fx-background-radius: 0 0 15 15 ;
+	-fx-border-radius: 0 0 15 15 ;
+  	-fx-background-radius: 0 0 15 15 ;
 }
 .plus{
--fx-border-radius: 15 15 0 0;
-  -fx-background-radius: 15 15 0 0;
+	-fx-border-radius: 15 15 0 0;
+	-fx-background-radius: 15 15 0 0;
 }
 
 .button {
@@ -182,11 +182,11 @@
 	-fx-background-color: linear-gradient( to right,#f5bf42, #f5a142);
 }
 .alert{
--fx-background-color: linear-gradient( to left, #f5bf42, #f5a142);
+	-fx-background-color: linear-gradient( to left, #f5bf42, #f5a142);
 }
 
 .alert:header *.header-panel {
--fx-background-color: linear-gradient( to left, #f5bf42, #f5a142);
+	-fx-background-color: linear-gradient( to left, #f5bf42, #f5a142);
 }
 
 .alert > *.content.label{
@@ -199,10 +199,10 @@
 }
 
 .dialog > *.button-bar *.button{
-	fx-pref-width: 120px;
+	-fx-pref-width: 120px;
 }
 .forgotten{
--fx-cursor: hand;}
+	-fx-cursor: hand;}
 
 .hbox {
     -fx-background-color: #ff9966;
