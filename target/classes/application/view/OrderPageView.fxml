@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="top" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="vboxProduct" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Label fx:id="order" text="Ordine " BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="totPrice" text="Label">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <right>
+      <Button mnemonicParsing="false" onAction="#sendPDF" text="Ottieni riepilogo" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets right="50.0" />
+         </BorderPane.margin></Button>
+   </right>
+</BorderPane>

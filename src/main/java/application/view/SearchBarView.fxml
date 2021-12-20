@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane focusTraversable="true" maxHeight="29.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="search" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField id="search_field" fx:id="text" maxHeight="29.0" maxWidth="500.0" minWidth="300.0" onKeyPressed="#searchFromKey">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TextField>
+            <Button id="search_btn" fx:id="searchBtn" maxHeight="29.0" mnemonicParsing="false" onAction="#search">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

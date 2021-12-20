@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="top" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="580.0" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="250.0" fitWidth="300.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" />
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="30.0">
+                     <children>
+                        <Label fx:id="name" maxWidth="300.0" text="Label" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="price" layoutX="10.0" layoutY="10.0" text="Label" />
+                     </children>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="favorites" mnemonicParsing="false" onAction="#addToFavorite" styleClass="btn" />
+                        <HBox prefHeight="100.0">
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#add" styleClass="plus" text="+" />
+                                    <Label fx:id="quantity" text="1" />
+                                    <Button maxWidth="30.0" mnemonicParsing="false" onAction="#remove" styleClass="minus" text="-" />
+                                 </children>
+                              </VBox>
+                              <Button fx:id="cart" mnemonicParsing="false" onAction="#addToCart" styleClass="btn" text="Carrello">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="40.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="description" maxWidth="550.0" text="Label" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#goBack" text="Torna alla home" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

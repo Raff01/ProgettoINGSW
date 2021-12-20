@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="top" onKeyReleased="#confirmOnKey" prefHeight="500.0" prefWidth="500.0" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" spacing="80.0">
+               <children>
+                  <Button fx:id="change" mnemonicParsing="false" onAction="#confirm" styleClass="btn" text="Modifica" />
+                  <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" styleClass="btn" text="Annulla" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@../../css/mainStyle.css" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane id="top" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <VBox spacing="3.0">
+                                 <children>
+                                    <Label prefHeight="31.0" text="Username" />
+                                    <Label prefHeight="31.0" text="Nome" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" text="Cognome" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" text="Data di nascita" />
+                                    <Label layoutX="10.0" layoutY="52.0" prefHeight="31.0" text="Email" />
+                                    <Label layoutX="10.0" layoutY="52.0" prefHeight="31.0" text="Password attuale" />
+                                    <Label layoutX="10.0" layoutY="73.0" prefHeight="31.0" text="Nuova password" />
+                                    <Label layoutX="10.0" layoutY="215.0" prefHeight="31.0" text="Conferma password">
+                                       <padding>
+                                          <Insets top="-3.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="248.0" prefHeight="31.0" text="Tipo profilo">
+                                       <padding>
+                                          <Insets top="-3.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="4.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="username" layoutX="10.0" layoutY="50.0" styleClass="textField" />
+                                    <TextField fx:id="name" styleClass="textField" />
+                                    <TextField fx:id="surname" styleClass="textField" />
+                                    <DatePicker fx:id="birthDate" />
+                                    <TextField fx:id="email" styleClass="textField" />
+                                    <PasswordField fx:id="currentPassword" onMouseEntered="#information" onMouseExited="#back" styleClass="textField" />
+                                    <PasswordField fx:id="newPassword" onMouseEntered="#information" onMouseExited="#back" styleClass="textField" />
+                                    <PasswordField fx:id="confirmPassword" layoutX="10.0" layoutY="210.0" styleClass="textField" />
+                                    <HBox alignment="CENTER" spacing="20.0">
+                                       <children>
+                                          <RadioButton fx:id="standardType" mnemonicParsing="false" onAction="#checkType" text="Standard" />
+                                          <RadioButton fx:id="VIPType" mnemonicParsing="false" onAction="#checkType" text="VIP" />
+                                          <Button mnemonicParsing="false" onAction="#showMore" styleClass="btn" text="Scopri di più" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ScrollPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Profilo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorText" alignment="CENTER" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

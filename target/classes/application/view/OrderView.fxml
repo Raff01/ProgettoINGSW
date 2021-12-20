@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="order" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="130.0">
+               <children>
+                  <Label fx:id="orderNumber" styleClass="order_element" text="Numero ordine:" />
+                  <Button mnemonicParsing="false" onAction="#cancel" text="Annulla">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="order_element" />
+                        <String fx:value="cancelbtn" />
+                     </styleClass></Button>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </HBox.margin></ImageView>
+                  <VBox spacing="30.0">
+                     <children>
+                        <Label fx:id="totPrice" />
+                        <Label fx:id="stateOrder" />
+                        <Button mnemonicParsing="false" onAction="#showMore" styleClass="btn" text="Mostra di più" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

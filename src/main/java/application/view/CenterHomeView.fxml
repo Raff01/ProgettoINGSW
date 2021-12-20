@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="550.0" minWidth="700.0" prefHeight="550.0" prefWidth="600.0" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane>
+               <children>
+                  <VBox id="container" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="favorite" text="Preferiti">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: trasparent;" stylesheets="@../../css/mainStyle.css" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="favoriteProducts" fillHeight="false" spacing="15.0" styleClass="hbox" />
+                           </content>
+                        </ScrollPane>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label fx:id="textVIP" text="Alcune offerte per i VIP">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonVip" mnemonicParsing="false" onAction="#vip" styleClass="btn" text="Diventa VIP" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="37.0" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: trasparent;" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="vipProducts" fillHeight="false" spacing="15.0" styleClass="hbox" />
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="288.0" layoutY="137.0" text="Prodotti">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <MenuButton fx:id="orderMenu" mnemonicParsing="false" styleClass="option" text="Ordina">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#ascendingOrder" styleClass="item" text="Ordine crescente" />
+                                    <MenuItem mnemonicParsing="false" onAction="#descendingOrder" styleClass="item" text="Ordine descrescente" />
+                                    <MenuItem mnemonicParsing="false" onAction="#alphabeticalOrder" styleClass="item" text="Ordine alfabetico" />
+                                 </items>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                        <GridPane fx:id="gridProducts" cacheShape="false" centerShape="false" hgap="15.0" maxHeight="-Infinity" maxWidth="-Infinity" scaleShape="false" vgap="5.0">
+                          <columnConstraints>
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" />
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" />
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" />
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+                            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+                            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="top" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Il tuo carrello">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="error" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <HBox id="top" alignment="TOP_CENTER" fillHeight="false">
+               <children>
+                  <VBox id="container" fx:id="vboxProduct" />
+                  <VBox alignment="TOP_RIGHT" spacing="10.0">
+                     <children>
+                        <Label fx:id="price" />
+                        <Button mnemonicParsing="false" onAction="#clickToPay" styleClass="btn" stylesheets="@../../css/mainStyle.css" text="Acquista" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

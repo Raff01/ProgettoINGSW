@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openProduct" prefHeight="200.0" prefWidth="375.0" style="-fx-background-radius: 15;" styleClass="card" stylesheets="@../../css/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></ImageView>
+            <VBox fillWidth="false" spacing="20.0">
+               <children>
+                  <Label fx:id="name" maxHeight="300.0" prefWidth="200.0" styleClass="info" text="Label" wrapText="true" />
+                  <Label fx:id="price" styleClass="info" text="Label" wrapText="true" />
+                  <Label fx:id="quantity" styleClass="info" />
+                  <Button fx:id="favorite" mnemonicParsing="false" onAction="#addOrDeleteFavorite" />
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <padding>
+      <Insets top="3.0" />
+   </padding>
+</BorderPane>

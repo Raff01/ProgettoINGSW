@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#confirmOnKey" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane id="top" stylesheets="@../../css/mainStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox id="top" alignment="CENTER" focusTraversable="true" mouseTransparent="true" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" text="Registrati">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorText" alignment="CENTER" text="Inserisci le tue credenziali" />
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" mouseTransparent="true" text="I campi contrassegnati con (*) sono obbligatori" textFill="#db0b0b" />
+                  <HBox alignment="CENTER" spacing="80.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#confirm" styleClass="btn" text="Conferma" />
+                        <Button mnemonicParsing="false" onAction="#cancel" styleClass="btn" text="Annulla" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </VBox>
+         </bottom>
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane id="container" focusTraversable="true" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="TOP_CENTER">
+                                 <children>
+                                    <VBox mouseTransparent="true" spacing="3.0">
+                                       <children>
+                                          <Label prefHeight="31.0" text="Username*" />
+                                          <Label prefHeight="31.0" text="Nome*" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" text="Cognome*" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" text="Data di nascita*" />
+                                          <Label layoutX="10.0" layoutY="52.0" prefHeight="31.0" text="Email*" />
+                                          <Label layoutX="10.0" layoutY="52.0" prefHeight="31.0" text="Password*" />
+                                          <Label layoutX="10.0" layoutY="73.0" prefHeight="31.0" text="Conferma password*" />
+                                          <Label layoutX="10.0" layoutY="215.0" prefHeight="31.0" text="Tipo profilo*">
+                                             <padding>
+                                                <Insets top="-3.0" />
+                                             </padding></Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox spacing="11.0">
+                                       <children>
+                                          <TextField fx:id="username" layoutX="10.0" layoutY="50.0" styleClass="textField" />
+                                          <TextField fx:id="name" styleClass="textField" />
+                                          <TextField fx:id="surname" styleClass="textField" />
+                                          <DatePicker fx:id="birthDate" />
+                                          <TextField fx:id="email" styleClass="textField" />
+                                          <PasswordField fx:id="password" onMouseEntered="#information" onMouseExited="#back" styleClass="textField" />
+                                          <PasswordField fx:id="confirmPassword" onMouseEntered="#information" onMouseExited="#back" styleClass="textField" />
+                                          <HBox alignment="CENTER" spacing="20.0">
+                                             <children>
+                                                <RadioButton fx:id="standardType" mnemonicParsing="false" onAction="#checkType" text="Standard" />
+                                                <RadioButton fx:id="VIPType" mnemonicParsing="false" onAction="#checkType" text="VIP" />
+                                                <Button mnemonicParsing="false" onAction="#showMore" styleClass="btn" text="Scopri di più" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
